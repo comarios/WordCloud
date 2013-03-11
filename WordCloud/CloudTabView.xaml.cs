@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,16 @@ namespace WordCloud {
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e) {
             Mouse.OverrideCursor = Cursors.Arrow;
+
+            BackgroundWorker worker = new BackgroundWorker();
+            worker.DoWork += worker_DoWork;
+            worker.RunWorkerAsync();
+        }
+
+        void worker_DoWork(object sender, DoWorkEventArgs e) {
+            MediaPlayer player = new MediaPlayer();
+            player.Open(new Uri("theme.mp3", UriKind.RelativeOrAbsolute));
+            player.Play();
         }
     }
 }
