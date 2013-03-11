@@ -85,7 +85,7 @@ namespace WordCloud
                         fontSize -= font_step;
                         opacity = 1.0;
                     }
-                    if (d[i].Count != prev_occ && opacity > 0.1) { opacity -= 0.1; if (opacity < 0.1) { opacity = 0.1; } }
+                    if (d[i].Count != prev_occ && opacity > 0.5) { opacity -= 0.1; if (opacity < 0.5) { opacity = 0.5; } }
                 }
                 else 
                 {
@@ -130,7 +130,7 @@ namespace WordCloud
 
         private void ResolveCollisions(ref int x, ref int y, ref  double fontHeight, ref double wordWidth)
         {
-            double step = 1.557;
+            double step = 1.2;
             double t = step;
             bool alt = false;
             Random rad = new Random();

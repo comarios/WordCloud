@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ca7c64d1-47a5-4dfe-a2eb-6a55540b6c16</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>MicrosoftJava</RootNamespace>
     <AssemblyName>MicrosoftJava</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -70,8 +70,6 @@
     </FsLex>
     <Compile Include="CommentLexer.fs" />
     <Compile Include="API.fs" />
-    <Compile Include="Program.fs" />
-    <None Include="App.config" />
     <None Include="CommentLexer.fsl" />
     <None Include="LiteralLexer.fsl" />
   </ItemGroup>
